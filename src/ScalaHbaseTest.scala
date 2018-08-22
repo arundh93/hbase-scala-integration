@@ -8,8 +8,10 @@ object ScalaHbaseTest {
   def main(args: Array[String]) = {
     println("ScalaHbaseTest!")
     val conf: Configuration = HBaseConfiguration.create()
-    conf.set("hbase.zookeeper.quorum", "localhost")
-    conf.set("hbase.zookeeper.property.clientPort", "2181")
+    // By default HBaseConfiguration.create loads resources from hbase-default.xml and hbase-site.xml
+    // Hence we need not explicitly set the values below in this case
+    //    conf.set("hbase.zookeeper.quorum", "localhost")
+    //    conf.set("hbase.zookeeper.property.clientPort", "2181")
     val connection: Connection = ConnectionFactory.createConnection(conf)
     val table = connection.getTable(TableName.valueOf("emp"))
     val put1: Put = new Put(Bytes.toBytes("row5"))
