@@ -22,7 +22,7 @@ object ScalaHbaseTest {
 
     //create new table
     val admin = connection.getAdmin
-    val tableDesc = new HTableDescriptor(Bytes.toBytes("mytable"))
+    val tableDesc = new HTableDescriptor(TableName.valueOf("my-table1"))
     val idsColumnFamilyDesc = new HColumnDescriptor(Bytes.toBytes("ids"))
     tableDesc.addFamily(idsColumnFamilyDesc)
     admin.createTable(tableDesc)
