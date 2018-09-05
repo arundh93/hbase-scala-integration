@@ -1,4 +1,6 @@
-import org.apache.spark.sql.{SparkSession, _}
+package app
+
+import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.execution.datasources.hbase._
 
 object SparkHbaseTest {

@@ -1,3 +1,5 @@
+package app
+
 import org.apache.spark.sql.{SparkSession, _}
 import org.apache.spark.sql.execution.datasources.hbase._
 
@@ -43,7 +45,3 @@ object SparkHbase {
        |}
        |}""".stripMargin
 }
-
-
-
-

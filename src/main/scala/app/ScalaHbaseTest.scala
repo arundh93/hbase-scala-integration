@@ -1,3 +1,5 @@
+package app
+
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.hbase.client.{Connection, ConnectionFactory, Put}
 import org.apache.hadoop.hbase.util.Bytes
